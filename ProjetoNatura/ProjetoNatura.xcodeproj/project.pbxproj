@@ -18,6 +18,7 @@
 		4E8C54AF1F2E84EC00CA4637 /* ConsultoriaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8C54AE1F2E84EC00CA4637 /* ConsultoriaViewController.swift */; };
 		4EC9F3461F25786A001879A5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC9F3451F25786A001879A5 /* LoginViewController.swift */; };
 		4EC9F3481F257883001879A5 /* ListaProdutoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC9F3471F257883001879A5 /* ListaProdutoTableViewController.swift */; };
+		ACA9E57A1F3620010089F102 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA9E5791F3620010089F102 /* RatingControl.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		4E8C54AE1F2E84EC00CA4637 /* ConsultoriaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsultoriaViewController.swift; sourceTree = "<group>"; };
 		4EC9F3451F25786A001879A5 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4EC9F3471F257883001879A5 /* ListaProdutoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListaProdutoTableViewController.swift; sourceTree = "<group>"; };
+		ACA9E5791F3620010089F102 /* RatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,19 +69,28 @@
 			isa = PBXGroup;
 			children = (
 				4E320B301F12EEBE0061DB81 /* AppDelegate.swift */,
-				4E320B321F12EEBE0061DB81 /* ViewController.swift */,
-				4EC9F3451F25786A001879A5 /* LoginViewController.swift */,
-				4EC9F3471F257883001879A5 /* ListaProdutoTableViewController.swift */,
+				ACA9E5781F361EEC0089F102 /* Controllers */,
 				4E320B341F12EEBE0061DB81 /* Main.storyboard */,
-				4E8C54AE1F2E84EC00CA4637 /* ConsultoriaViewController.swift */,
-				4E8C54AC1F2E7F0E00CA4637 /* PreferenciasViewController.swift */,
-				4E8C54AA1F2E7D1500CA4637 /* PerfilViewController.swift */,
-				4E8C54A81F2E795300CA4637 /* ProdutoViewController.swift */,
+				ACA9E5791F3620010089F102 /* RatingControl.swift */,
 				4E320B371F12EEBE0061DB81 /* Assets.xcassets */,
 				4E320B391F12EEBE0061DB81 /* LaunchScreen.storyboard */,
 				4E320B3C1F12EEBE0061DB81 /* Info.plist */,
 			);
 			path = ProjetoNatura;
+			sourceTree = "<group>";
+		};
+		ACA9E5781F361EEC0089F102 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4E320B321F12EEBE0061DB81 /* ViewController.swift */,
+				4EC9F3451F25786A001879A5 /* LoginViewController.swift */,
+				4EC9F3471F257883001879A5 /* ListaProdutoTableViewController.swift */,
+				4E8C54AE1F2E84EC00CA4637 /* ConsultoriaViewController.swift */,
+				4E8C54AC1F2E7F0E00CA4637 /* PreferenciasViewController.swift */,
+				4E8C54AA1F2E7D1500CA4637 /* PerfilViewController.swift */,
+				4E8C54A81F2E795300CA4637 /* ProdutoViewController.swift */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,6 +169,7 @@
 				4E8C54AB1F2E7D1500CA4637 /* PerfilViewController.swift in Sources */,
 				4E8C54A91F2E795300CA4637 /* ProdutoViewController.swift in Sources */,
 				4EC9F3461F25786A001879A5 /* LoginViewController.swift in Sources */,
+				ACA9E57A1F3620010089F102 /* RatingControl.swift in Sources */,
 				4E8C54AF1F2E84EC00CA4637 /* ConsultoriaViewController.swift in Sources */,
 				4EC9F3481F257883001879A5 /* ListaProdutoTableViewController.swift in Sources */,
 				4E320B331F12EEBE0061DB81 /* ViewController.swift in Sources */,
@@ -285,6 +297,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ProjetoNatura/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.fiap.ProjetoNatura;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -297,6 +310,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ProjetoNatura/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.com.fiap.ProjetoNatura;
 				PRODUCT_NAME = "$(TARGET_NAME)";
