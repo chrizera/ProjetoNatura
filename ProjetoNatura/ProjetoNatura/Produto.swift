@@ -10,12 +10,12 @@ import UIKit
 
 class Produto {
 
-    private var nome: String
-    private var classificacao: Int
-    private var quantidade: Int
-    private var preco: Double
-    private var foto: UIImage?
-    private var descricao: String
+    var nome: String
+    var classificacao: Int
+    var quantidade: Int
+    var preco: Double
+    var foto: UIImage?
+    var descricao: String
     
     init(nome: String, classificacao: Int, quantidade: Int, preco: Double, foto: UIImage?, descricao: String) {
         self.nome = nome

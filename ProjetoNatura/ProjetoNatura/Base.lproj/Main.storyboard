@@ -113,58 +113,50 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="0.501700166" blue="0.065074503450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProdutoCell" rowHeight="386" id="88T-P0-kZF">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ProdutoCell" rowHeight="386" id="88T-P0-kZF" customClass="ProdutoTableViewCell" customModule="ProjetoNatura" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="386"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="88T-P0-kZF" id="RmC-8B-IQT">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="386"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Produtos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CJc-8d-Uni">
-                                            <rect key="frame" x="162" y="8" width="90" height="33"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <searchBar contentMode="redraw" fixedFrame="YES" placeholder="Procurar por nome ou tipo" translatesAutoresizingMaskIntoConstraints="NO" id="uPh-bM-uBL">
-                                            <rect key="frame" x="0.0" y="41" width="414" height="44"/>
+                                            <rect key="frame" x="0.0" y="8" width="415" height="44"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </searchBar>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gel Creme Antissinais 30" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FdT-hO-3cN">
+                                            <rect key="frame" x="8" y="52" width="398" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="XPf-40-NuN" customClass="RatingControl" customModule="ProjetoNatura" customModuleProvider="target">
+                                            <rect key="frame" x="117" y="74" width="180" height="28"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </stackView>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="produto1" translatesAutoresizingMaskIntoConstraints="NO" id="6sf-p6-AwA">
-                                            <rect key="frame" x="8" y="142" width="150" height="100"/>
+                                            <rect key="frame" x="8" y="110" width="150" height="100"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gramas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5X-r2-VWF">
-                                            <rect key="frame" x="188" y="143" width="218" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quantidade" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E5X-r2-VWF">
+                                            <rect key="frame" x="166" y="110" width="218" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="por R$68,20 a vista" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lC9-hT-LRM">
-                                            <rect key="frame" x="188" y="183" width="218" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="por R$68,20 a vista" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lC9-hT-LRM">
+                                            <rect key="frame" x="166" y="150" width="240" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ou em 2 vezes de R$34,10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krD-pp-Zt4">
-                                            <rect key="frame" x="188" y="222" width="218" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ou em 2 vezes de R$34,10" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="krD-pp-Zt4">
+                                            <rect key="frame" x="166" y="189" width="240" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uag-6q-2wv">
-                                            <rect key="frame" x="8" y="277" width="398" height="79"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <mutableString key="text">Sobre o produto:
-A partir dos 30 anos, a pele comeÁa a mostrar sinais de cansaÁo, primeiras rugas e linhas de express„o. O tratamento ideal È aquele que renova a pele e recupera a energia. Por isso, o novo gel creme antissinais 30+: Imediatamente: reduz o aspecto de pele cansada e hidrata ApÛs 7 dias: estimula a renovaÁ„o celular ApÛs 15 dias: restaura a barreira natural de hidrataÁ„o da pele ApÛs 30 dias: melhora a textura da pele e suaviza as linhas de express„o ApÛs 60 dias: reduz rugas Com a exclusiva tecnologia 30+, que une o extrato de jambu (ativo da biodiversidade brasileira respons·vel por relaxar as microtensıes das fibras de col·geno e elastina reduzindo linhas e rugas de express„o) aos polifenÛis (potentes antioxidantes que protegem a pele contra a perda de energia celular).
-Conte˙do: 40 g - rende atÈ 80 aplicaÁıes.
-BenefÌcios: A vers„o diurna protege contra as agressıes do dia a dia que aceleram o processo de envelhecimento atravÈs do combate ao radicais livres (aÁ„o antioxidante), alta proteÁ„o solar fotoest·vel (FPS 30 FPUVA 10) e hidrataÁ„o prolongada. Possui textura leve, livre de Ûleo.
-Recomendado para: Mulheres a partir dos 30 anos.</mutableString>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -174,21 +166,28 @@ Recomendado para: Mulheres a partir dos 30 anos.</mutableString>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" red="1" green="0.501700166" blue="0.065074503450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Gel Creme Antissinais 30" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FdT-hO-3cN">
-                                            <rect key="frame" x="8" y="85" width="398" height="21"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uag-6q-2wv">
+                                            <rect key="frame" x="8" y="218" width="398" height="138"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <string key="text">Sobre o produto:
+A partir dos 30 anos, a pele comeÁa a mostrar sinais de cansaÁo, primeiras rugas e linhas de express„o. O tratamento ideal È aquele que renova a pele e recupera a energia. Por isso, o novo gel creme antissinais 30+: Imediatamente: reduz o aspecto de pele cansada e hidrata ApÛs 7 dias: estimula a renovaÁ„o celular ApÛs 15 dias: restaura a barreira natural de hidrataÁ„o da pele ApÛs 30 dias: melhora a textura da pele e suaviza as linhas de express„o ApÛs 60 dias: reduz rugas Com a exclusiva tecnologia 30+, que une o extrato de jambu (ativo da biodiversidade brasileira respons·vel por relaxar as microtensıes das fibras de col·geno e elastina reduzindo linhas e rugas de express„o) aos polifenÛis (potentes antioxidantes que protegem a pele contra a perda de energia celular).
+Conte˙do: 40 g - rende atÈ 80 aplicaÁıes.
+BenefÌcios: A vers„o diurna protege contra as agressıes do dia a dia que aceleram o processo de envelhecimento atravÈs do combate ao radicais livres (aÁ„o antioxidante), alta proteÁ„o solar fotoest·vel (FPS 30 FPUVA 10) e hidrataÁ„o prolongada. Possui textura leve, livre de Ûleo.
+Recomendado para: Mulheres a partir dos 30 anos.</string>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <stackView opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="XPf-40-NuN" customClass="RatingControl" customModule="ProjetoNatura" customModuleProvider="target">
-                                            <rect key="frame" x="117" y="106" width="180" height="28"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        </stackView>
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="VAz-5D-4xV" kind="show" id="j2O-rz-WLC"/>
+                                    <outlet property="descricao" destination="uag-6q-2wv" id="2U2-YK-lMv"/>
+                                    <outlet property="imagem" destination="6sf-p6-AwA" id="zh4-so-qms"/>
+                                    <outlet property="nome" destination="FdT-hO-3cN" id="0Cj-yJ-DUu"/>
+                                    <outlet property="precoAVista" destination="lC9-hT-LRM" id="eEp-1c-KkI"/>
+                                    <outlet property="precoParcelado" destination="krD-pp-Zt4" id="CkU-d5-vHW"/>
+                                    <outlet property="quantidade" destination="E5X-r2-VWF" id="VYq-ry-keO"/>
+                                    <segue destination="VAz-5D-4xV" kind="show" identifier="ListaProdutoParaProdutoSegue" id="j2O-rz-WLC"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

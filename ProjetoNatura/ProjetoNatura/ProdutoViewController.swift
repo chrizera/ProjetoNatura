@@ -9,6 +9,14 @@
 import UIKit
 
 class ProdutoViewController: UIViewController {
+    
+    var nome = ""
+    var quantidade = 0
+    var preco = 0.0
+    var descricao = ""
+    var foto: UIImage?
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

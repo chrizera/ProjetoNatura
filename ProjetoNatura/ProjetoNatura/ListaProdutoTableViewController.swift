@@ -9,16 +9,31 @@
 import UIKit
 
 class ListaProdutoTableViewController: UITableViewController {
+    
+    var produtos = [Produto]()
+    var nome = ""
+    var quantidade = 0
+    var preco = 0.0
+    var descricao = ""
+    var foto: UIImage?
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        let produto1 = Produto(nome: "Gel Creme Antissinais 30", classificacao: 5, quantidade: 40, preco: 68.20, foto: #imageLiteral(resourceName: "produto1"), descricao: "Sobre o produto: A partir dos 30 anos, a pele comeca a mostrar sinais de cansaco, primeiras rugas e linhas de expressao. O tratamento ideal é aquele que renova a pele e recupera a energia. Por isso, o novo gel creme antissinais 30+: Imediatamente: reduz o aspecto de pele cansada e hidrata Após 7 dias: estimula a renovaçao celular Após 15 dias: restaura a barreira natural de hidrataçao da pele Após 30 dias: melhora a textura da pele e suaviza as linhas de expressao Após 60 dias: reduz rugas Com a exclusiva tecnologia 30+, que une o extrato de jambu (ativo da biodiversidade brasileira responsável por relaxar as microtensoes das fibras de colágeno e elastina reduzindo linhas e rugas de expressao) aos polifenois (potentes antioxidantes que protegem a pele contra a perda de energia celular). Conteudo: 40 g - rende até 80 aplicaçoes. Benefícios: A versao diurna protege contra as agressoes do dia a dia que aceleram o processo de envelhecimento através do combate aos radicais livres (açao antioxidante), alta proteçao solar fotoestável (FPS 30 FPUVA 10) e hidrataçao prolongada. Possui textura leve, livre de óleo. Recomendado para: Mulheres a partir dos 30 anos.")
+        let produto2 = Produto(nome: "Tonico Detox Adstringente Chronos", classificacao: 5, quantidade: 150, preco: 41.10, foto: #imageLiteral(resourceName: "produto2"), descricao: "Sobre o produto: Os novos tonicos contem a tecnologia Detox Celular para eliminar toxinas celulares deixando as celulas mais saudaveis e com mais energia para absorver os ativos dos produtos de tratamento, e reduzindo sinais de cansaco provocados pelo excesso de toxinas, como o amarelamento da pele, perda do brilho natural etc. Beneficios: Os tonicos continuam estimulando a microcirculacao, reequilibrando o pH, acalmando a pele e regularizando funcoes de acordo com o tipo de pele. O novo Natura Chronos Tonico Detox Adstringente de Natura Chronos foi desenvolvido para atender especificamente o publico de pele mista a oleosa, tem em sua formulacao acido salicilico, que limpa e desobstrui os poros, alem de outros ingredientes que ajudam a controlar a oleosidade da pele ao longo do dia.")
+        let produto3 = Produto(nome: "Hydra Tonalizante Chronos", classificacao: 5, quantidade: 50, preco: 38.40, foto: #imageLiteral(resourceName: "produto3"), descricao: "O novo Chronos Hydra oferece uma solução completa em hidratação para a sua pele: de dia, hidrata, protege do sol e das agressões diárias e a noite, hidrata e acalma a pele. Benefícios: Possui textura leve, adequada à pele da mulher brasileira e embalagem prática e fácil de transportar.")
+        let produto4 = Produto(nome: "Shampoo Hidratação Reparadora Plant", classificacao: 5, quantidade: 300, preco: 12.30, foto: #imageLiteral(resourceName: "produto4"), descricao: "A linha especialista em manter seus cabelos hidratados e reparados agora com novas fórmulas e 10 benefícios. Com alta tecnologia, o poder do complexo de bioaminoácidos de QUINOA – ativos naturais e fonte de proteínas e aminoácidos, recuperam o interior dos fios e agem na parte externa da fibra, fortalecendo e restaurando profundamente os cabelos danificados. O shampoo Hidratação Reparadora limpa os fios deixando-os prontos para iniciar o tratamento. Benefícios: 1. Nutrição profunda 2. Fortalecimento 3. Selagem de cutículas 4. Redução de danos 5. Brilho intenso 6. Reparação de pontas duplas 7. Recuperação do cabelo 8. Ação antifrizz 9. Proteção térmica 10. Facilidade para pentear. Recomendado para: Cabelos secos e ressecados.")
+        let produto5 = Produto(nome: "Shampoo Nutrição e Brilho Plant", classificacao: 5, quantidade: 300, preco: 11.40, foto: #imageLiteral(resourceName: "produto5"), descricao: "Uma linha completa de tratamento dos fios enriquecida com exclusivo complexo de óleos nutritivos (óleo de noz pecã, macadâmia e gergelim) para proporcionar nutrição, restauração profunda e brilho aos fios, sem pesar. Benefícios: Limpa sem agredir, possui fórmula leve e transparente, prepara os fios para iniciar o tratamento.")
+        let produto6 = Produto(nome: "Condicionador Liso e Solto Plant", classificacao: 5, quantidade: 300, preco: 15.50, foto: #imageLiteral(resourceName: "produto6"), descricao: "Quando os cabelos passam por processos de alisamento, eles precisam de um tratamento especial. O Condicionador Liso e Solto Plant proporciona um banho de queratina vegetal que age diretamente na estrutura capilar e restaura os fios profundamente, fortalecendo e deixando os cabelos macios e lisos por mais tempo. Além disso, ajuda a reduzir o frizz e prolonga o efeito da escova progressiva. Benefícios: Cuidados com os cabelos. Recomendado para: Cabelos lisos e alisados.")
+        
+        produtos.append(produto1)
+        produtos.append(produto2)
+        produtos.append(produto3)
+        produtos.append(produto4)
+        produtos.append(produto5)
+        produtos.append(produto6)
     }
 
     override func didReceiveMemoryWarning() {
@@ -35,62 +50,49 @@ class ListaProdutoTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        return produtos.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ProdutoCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ProdutoCell", for: indexPath) as! ProdutoTableViewCell
 
-        // Configure the cell...
-
+        let produto = produtos[indexPath.row]
+        
+        cell.nome.text = produto.nome
+        cell.imagem.image = produto.foto
+        cell.quantidade.text = "\(produto.quantidade)ml"
+        cell.precoAVista.text = "Por \(produto.preco) a vista"
+        cell.precoParcelado.text = "ou em 2 vezes de \(produto.preco/2) sem juros"
+        cell.descricao.text = produto.descricao
+        
         return cell
     }
+
     
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let produto = produtos[indexPath.row]
+        
+        nome = produto.nome
+        foto = produto.foto
+        quantidade = produto.quantidade
+        preco = produto.preco
+        descricao = produto.descricao
+        
+        performSegue(withIdentifier: "ListaProdutoParaProdutoSegue", sender: nil)
     }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        let produtoViewController = segue.destination as! ProdutoViewController
+        
+        
     }
-    */
+    
 
 }
