@@ -16,12 +16,18 @@ class ProdutoViewController: UIViewController {
     var descricao = ""
     var foto: UIImage?
     
+    @IBOutlet weak var nomeLabel: UILabel!
+    @IBOutlet weak var imagemLabel: UIImageView!
+    @IBOutlet weak var precoAvista: UILabel!
+    @IBOutlet weak var precoParcelado: UILabel!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        nomeLabel.text = nome
+        precoAvista.text = "Por R$\(preco) a vista"
+        precoParcelado.text = "ou em 2 parcelas de R$\(preco/2) sem juros"
+        imagemLabel.image = foto
     }
 
     override func didReceiveMemoryWarning() {

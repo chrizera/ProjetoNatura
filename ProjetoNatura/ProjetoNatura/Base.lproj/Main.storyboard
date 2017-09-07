@@ -121,7 +121,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <searchBar contentMode="redraw" fixedFrame="YES" placeholder="Procurar por nome ou tipo" translatesAutoresizingMaskIntoConstraints="NO" id="uPh-bM-uBL">
-                                            <rect key="frame" x="0.0" y="8" width="415" height="44"/>
+                                            <rect key="frame" x="-1" y="8" width="416" height="44"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </searchBar>
@@ -202,7 +202,7 @@ Recomendado para: Mulheres a partir dos 30 anos.</string>
             </objects>
             <point key="canvasLocation" x="3004.347826086957" y="164.67391304347828"/>
         </scene>
-        <!--Produto View Controller-->
+        <!--Produto-->
         <scene sceneID="eid-MI-O1F">
             <objects>
                 <viewController id="VAz-5D-4xV" customClass="ProdutoViewController" customModule="ProjetoNatura" customModuleProvider="target" sceneMemberID="viewController">
@@ -231,14 +231,14 @@ Recomendado para: Mulheres a partir dos 30 anos.</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Por R$68,20 a vista " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5GG-PH-IRt">
-                                <rect key="frame" x="20" y="552" width="159" height="21"/>
+                                <rect key="frame" x="20" y="552" width="374" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ou em 2 vezes de R$34,10 sem juros" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xA9-C7-8Oq">
-                                <rect key="frame" x="20" y="611" width="289" height="21"/>
+                                <rect key="frame" x="20" y="611" width="374" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -268,7 +268,16 @@ Recomendado para: Mulheres a partir dos 30 anos.</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Produto" id="KkN-Xe-7tF">
+                        <barButtonItem key="backBarButtonItem" title="Voltar" id="SY7-06-Oyv"/>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="imagemLabel" destination="J4C-Eq-I60" id="buA-vc-4Jy"/>
+                        <outlet property="nomeLabel" destination="qI6-fQ-TcQ" id="Imf-Qf-fBs"/>
+                        <outlet property="precoAvista" destination="5GG-PH-IRt" id="m7o-qX-3Ib"/>
+                        <outlet property="precoParcelado" destination="xA9-C7-8Oq" id="to0-2r-cEt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3nC-9y-eUv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
