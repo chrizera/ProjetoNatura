@@ -8,12 +8,30 @@
 
 import UIKit
 
-class PreferenciasViewController: UIViewController {
+class PreferenciasViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
+    @IBOutlet weak var tipoPele: UIPickerView!
+    
+    @IBOutlet weak var etnia: UIPickerView!
+    
+    @IBOutlet weak var tipoCabelo: UIPickerView!
+    
+    @IBOutlet weak var comprimentoCabelo: UIPickerView!
+    
+    @IBOutlet weak var estruturaCabelo: UIPickerView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return 1
     }
 
     override func didReceiveMemoryWarning() {
