@@ -8,32 +8,43 @@
 
 import UIKit
 
-class PreferenciasViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class PreferenciasViewController: UIViewController{
 
     @IBOutlet weak var tipoPele: UIPickerView!
-    
     @IBOutlet weak var etnia: UIPickerView!
-    
     @IBOutlet weak var tipoCabelo: UIPickerView!
-    
     @IBOutlet weak var comprimentoCabelo: UIPickerView!
-    
+    @IBOutlet weak var corCabelo: UIPickerView!
+    @IBOutlet weak var texturaCabelo: UIPickerView!
     @IBOutlet weak var estruturaCabelo: UIPickerView!
+    
+    let tipoPeledatadelegate = TipoPeleDataSource()
+    let etniasdatadelegate = EtniaDataSource()
+    let tipoCabelodatadelegate = TipoCabeloDataSource()
+    let comprimentoCabelodatadelegate = ComprimentoCabeloDataSource()
+    let corCabelodatadelegate = CorCabeloDataSource()
+    let texturaCabelodatadelegate = TexturaCabeloDataSource()
+    let estruturaCabelodatadelegate = EstruturaCabeloDataSource()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        tipoPele.dataSource = tipoPeledatadelegate
+        tipoPele.delegate = tipoPeledatadelegate
+        etnia.dataSource = etniasdatadelegate
+        etnia.delegate = etniasdatadelegate
+        tipoCabelo.dataSource = tipoCabelodatadelegate
+        tipoCabelo.delegate = tipoCabelodatadelegate
+        comprimentoCabelo.dataSource = comprimentoCabelodatadelegate
+        comprimentoCabelo.delegate = comprimentoCabelodatadelegate
+        corCabelo.dataSource = corCabelodatadelegate
+        corCabelo.delegate = corCabelodatadelegate
+        texturaCabelo.dataSource = texturaCabelodatadelegate
+        texturaCabelo.delegate = texturaCabelodatadelegate
+        estruturaCabelo.dataSource = estruturaCabelodatadelegate
+        estruturaCabelo.delegate = estruturaCabelodatadelegate
         // Do any additional setup after loading the view.
     }
     
-    func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        return 1
-    }
-    
-    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 1
-    }
-
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

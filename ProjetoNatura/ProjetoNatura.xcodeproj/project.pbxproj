@@ -19,6 +19,13 @@
 		4E8C54AF1F2E84EC00CA4637 /* ConsultoriaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8C54AE1F2E84EC00CA4637 /* ConsultoriaViewController.swift */; };
 		4EC9F3461F25786A001879A5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC9F3451F25786A001879A5 /* LoginViewController.swift */; };
 		4EC9F3481F257883001879A5 /* ListaProdutoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC9F3471F257883001879A5 /* ListaProdutoTableViewController.swift */; };
+		4EEA08061F64BDCF003FA291 /* TipoPeleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEA08051F64BDCF003FA291 /* TipoPeleDataSource.swift */; };
+		4EEA08081F64C0FE003FA291 /* EtniaDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEA08071F64C0FE003FA291 /* EtniaDataSource.swift */; };
+		4EEA080A1F64C2E7003FA291 /* TipoCabeloDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEA08091F64C2E7003FA291 /* TipoCabeloDataSource.swift */; };
+		4EEA080C1F64C5E0003FA291 /* ComprimentoCabeloDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEA080B1F64C5E0003FA291 /* ComprimentoCabeloDataSource.swift */; };
+		4EEA080E1F64CA9A003FA291 /* CorCabeloDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEA080D1F64CA9A003FA291 /* CorCabeloDataSource.swift */; };
+		4EEA08101F64CD03003FA291 /* TexturaCabeloDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEA080F1F64CD03003FA291 /* TexturaCabeloDataSource.swift */; };
+		4EEA08121F64D1DA003FA291 /* EstruturaCabeloDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEA08111F64D1DA003FA291 /* EstruturaCabeloDataSource.swift */; };
 		ACA9E57A1F3620010089F102 /* RatingControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA9E5791F3620010089F102 /* RatingControl.swift */; };
 		ACA9E57C1F36301D0089F102 /* Produto.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA9E57B1F36301D0089F102 /* Produto.swift */; };
 		ACA9E57F1F3632530089F102 /* Usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACA9E57E1F3632530089F102 /* Usuario.swift */; };
@@ -39,6 +46,13 @@
 		4E8C54AE1F2E84EC00CA4637 /* ConsultoriaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsultoriaViewController.swift; sourceTree = "<group>"; };
 		4EC9F3451F25786A001879A5 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4EC9F3471F257883001879A5 /* ListaProdutoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListaProdutoTableViewController.swift; sourceTree = "<group>"; };
+		4EEA08051F64BDCF003FA291 /* TipoPeleDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipoPeleDataSource.swift; sourceTree = "<group>"; };
+		4EEA08071F64C0FE003FA291 /* EtniaDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EtniaDataSource.swift; sourceTree = "<group>"; };
+		4EEA08091F64C2E7003FA291 /* TipoCabeloDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TipoCabeloDataSource.swift; sourceTree = "<group>"; };
+		4EEA080B1F64C5E0003FA291 /* ComprimentoCabeloDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComprimentoCabeloDataSource.swift; sourceTree = "<group>"; };
+		4EEA080D1F64CA9A003FA291 /* CorCabeloDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CorCabeloDataSource.swift; sourceTree = "<group>"; };
+		4EEA080F1F64CD03003FA291 /* TexturaCabeloDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TexturaCabeloDataSource.swift; sourceTree = "<group>"; };
+		4EEA08111F64D1DA003FA291 /* EstruturaCabeloDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EstruturaCabeloDataSource.swift; sourceTree = "<group>"; };
 		ACA9E5791F3620010089F102 /* RatingControl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingControl.swift; sourceTree = "<group>"; };
 		ACA9E57B1F36301D0089F102 /* Produto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Produto.swift; sourceTree = "<group>"; };
 		ACA9E57E1F3632530089F102 /* Usuario.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Usuario.swift; sourceTree = "<group>"; };
@@ -74,6 +88,7 @@
 		4E320B2F1F12EEBE0061DB81 /* ProjetoNatura */ = {
 			isa = PBXGroup;
 			children = (
+				4EEA08041F64BD95003FA291 /* Datasources */,
 				4E6B81C81F61E21200E6A00E /* View */,
 				4E320B301F12EEBE0061DB81 /* AppDelegate.swift */,
 				ACA9E5781F361EEC0089F102 /* Controllers */,
@@ -92,6 +107,20 @@
 				4E6B81C91F61E2C400E6A00E /* ProdutoTableViewCell.swift */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		4EEA08041F64BD95003FA291 /* Datasources */ = {
+			isa = PBXGroup;
+			children = (
+				4EEA08051F64BDCF003FA291 /* TipoPeleDataSource.swift */,
+				4EEA08071F64C0FE003FA291 /* EtniaDataSource.swift */,
+				4EEA08091F64C2E7003FA291 /* TipoCabeloDataSource.swift */,
+				4EEA080B1F64C5E0003FA291 /* ComprimentoCabeloDataSource.swift */,
+				4EEA080D1F64CA9A003FA291 /* CorCabeloDataSource.swift */,
+				4EEA080F1F64CD03003FA291 /* TexturaCabeloDataSource.swift */,
+				4EEA08111F64D1DA003FA291 /* EstruturaCabeloDataSource.swift */,
+			);
+			name = Datasources;
 			sourceTree = "<group>";
 		};
 		ACA9E5781F361EEC0089F102 /* Controllers */ = {
@@ -190,17 +219,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EEA08081F64C0FE003FA291 /* EtniaDataSource.swift in Sources */,
 				4E8C54AD1F2E7F0E00CA4637 /* PreferenciasViewController.swift in Sources */,
 				4E8C54AB1F2E7D1500CA4637 /* PerfilViewController.swift in Sources */,
 				4E8C54A91F2E795300CA4637 /* ProdutoViewController.swift in Sources */,
+				4EEA080A1F64C2E7003FA291 /* TipoCabeloDataSource.swift in Sources */,
 				ACA9E57C1F36301D0089F102 /* Produto.swift in Sources */,
+				4EEA080E1F64CA9A003FA291 /* CorCabeloDataSource.swift in Sources */,
 				4EC9F3461F25786A001879A5 /* LoginViewController.swift in Sources */,
 				4E6B81CA1F61E2C400E6A00E /* ProdutoTableViewCell.swift in Sources */,
+				4EEA08061F64BDCF003FA291 /* TipoPeleDataSource.swift in Sources */,
 				ACA9E57A1F3620010089F102 /* RatingControl.swift in Sources */,
 				4E8C54AF1F2E84EC00CA4637 /* ConsultoriaViewController.swift in Sources */,
 				4EC9F3481F257883001879A5 /* ListaProdutoTableViewController.swift in Sources */,
 				4E320B331F12EEBE0061DB81 /* ViewController.swift in Sources */,
 				4E320B311F12EEBE0061DB81 /* AppDelegate.swift in Sources */,
+				4EEA080C1F64C5E0003FA291 /* ComprimentoCabeloDataSource.swift in Sources */,
+				4EEA08121F64D1DA003FA291 /* EstruturaCabeloDataSource.swift in Sources */,
+				4EEA08101F64CD03003FA291 /* TexturaCabeloDataSource.swift in Sources */,
 				ACA9E57F1F3632530089F102 /* Usuario.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
