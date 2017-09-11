@@ -34,6 +34,7 @@ class ListaProdutoTableViewController: UITableViewController {
         produtos.append(produto4)
         produtos.append(produto5)
         produtos.append(produto6)
+
     }
 
     override func didReceiveMemoryWarning() {
