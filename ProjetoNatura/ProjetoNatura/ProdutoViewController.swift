@@ -25,7 +25,7 @@ class ProdutoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         nomeLabel.text = nome
-        precoAvista.text = "Por R$\(preco)0 a vista"
+        precoAvista.text = "Por R$\(preco)0 à vista"
         precoParcelado.text = "ou em 2x de R$\(preco/2)0 sem juros"
         imagemLabel.image = foto
     }

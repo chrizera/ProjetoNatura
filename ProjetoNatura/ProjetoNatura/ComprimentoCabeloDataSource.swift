@@ -10,7 +10,7 @@ import UIKit
 
 class ComprimentoCabeloDataSource: NSObject, UIPickerViewDelegate, UIPickerViewDataSource {
 
-    var comprimentosCabelo = ["Curto - até 30cm", "Médio - até 50cm", "Longo - mais de 50cm"]
+    var comprimentosCabelo = ["Curto (até 30cm)", "Médio (até 50cm)", "Longo (mais de 50cm)"]
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return comprimentosCabelo.count

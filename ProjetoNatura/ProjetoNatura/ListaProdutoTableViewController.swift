@@ -21,7 +21,7 @@ class ListaProdutoTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let produto1 = Produto(nome: "Gel Creme Antissinais 30", classificacao: 5, quantidade: 40, preco: 68.20, foto: #imageLiteral(resourceName: "produto1"), descricao: "Sobre o produto: A partir dos 30 anos, a pele comeca a mostrar sinais de cansaco, primeiras rugas e linhas de expressao. O tratamento ideal é aquele que renova a pele e recupera a energia. Por isso, o novo gel creme antissinais 30+ reduz o aspecto de pele cansada e hidrata, estimula a renovaçao celular, restaura a barreira natural de hidrataçao da pele, melhora a textura da pele e suaviza as linhas de expressao e reduz rugas.")
+        let produto1 = Produto(nome: "Gel Creme Antissinais 30", classificacao: 5, quantidade: 40, preco: 68.20, foto: #imageLiteral(resourceName: "produto1"), descricao: "Sobre o produto: A partir dos 30 anos, a pele começa a mostrar sinais de cansaço: primeiras rugas e linhas de expressão. O tratamento ideal é aquele que renova a pele e recupera a energia. Por isso, o novo gel creme antissinais 30+ reduz o aspecto de pele cansada e hidrata, estimula a renovaçao celular, restaura a barreira natural de hidrataçao da pele, melhora a textura da pele e suaviza as linhas de expressao e reduz rugas.")
         let produto2 = Produto(nome: "Tonico Detox Adstringente Chronos", classificacao: 5, quantidade: 150, preco: 41.10, foto: #imageLiteral(resourceName: "produto2"), descricao: "Sobre o produto: Os novos tonicos contem a tecnologia Detox Celular para eliminar toxinas celulares deixando as celulas mais saudaveis e com mais energia para absorver os ativos dos produtos de tratamento, e reduzindo sinais de cansaco provocados pelo excesso de toxinas, como o amarelamento da pele, perda do brilho natural etc.")
         let produto3 = Produto(nome: "Hydra Tonalizante Chronos", classificacao: 5, quantidade: 50, preco: 38.40, foto: #imageLiteral(resourceName: "produto3"), descricao: "O novo Chronos Hydra oferece uma solução completa em hidratação para a sua pele: de dia, hidrata, protege do sol e das agressões diárias e a noite, hidrata e acalma a pele. Benefícios: Possui textura leve, adequada à pele da mulher brasileira e embalagem prática e fácil de transportar.")
         let produto4 = Produto(nome: "Shampoo Hidratação Reparadora Plant", classificacao: 5, quantidade: 300, preco: 12.30, foto: #imageLiteral(resourceName: "produto4"), descricao: "A linha especialista em manter seus cabelos hidratados e reparados agora com novas fórmulas e 10 benefícios. Com alta tecnologia, o poder do complexo de bioaminoácidos de QUINOA – ativos naturais e fonte de proteínas e aminoácidos, recuperam o interior dos fios e agem na parte externa da fibra, fortalecendo e restaurando profundamente os cabelos danificados. O shampoo Hidratação Reparadora limpa os fios deixando-os prontos para iniciar o tratamento.")
@@ -34,6 +34,11 @@ class ListaProdutoTableViewController: UITableViewController {
         produtos.append(produto4)
         produtos.append(produto5)
         produtos.append(produto6)
+        
+        let alerta = UIAlertController(title: "Atenção!", message: "Clique no menu PREFERÊNCIAS para saber quais são os produtos exclusivos para você!", preferredStyle: .alert)
+        alerta.addAction(UIAlertAction(title: "Descobrir", style: .default, handler: nil))
+        
+        present(alerta, animated: true, completion: nil)
 
     }
 
@@ -63,7 +68,7 @@ class ListaProdutoTableViewController: UITableViewController {
         cell.nome.text = produto.nome
         cell.imagem.image = produto.foto
         cell.quantidade.text = "\(produto.quantidade)ml"
-        cell.precoAVista.text = "Por R$\(produto.preco)0 a vista"
+        cell.precoAVista.text = "Por R$\(produto.preco)0 à vista"
         cell.precoParcelado.text = "ou em 2x de R$\(produto.preco/2)0 sem juros"
         cell.descricao.text = produto.descricao
         
@@ -81,7 +86,7 @@ class ListaProdutoTableViewController: UITableViewController {
         preco = produto.preco
         descricao = produto.descricao
         
-        performSegue(withIdentifier: "ListaProdutoParaProdutoSegue", sender: nil)
+       performSegue(withIdentifier: "ListaProdutoParaProdutoSegue", sender: nil)
     }
     
     // MARK: - Navigation

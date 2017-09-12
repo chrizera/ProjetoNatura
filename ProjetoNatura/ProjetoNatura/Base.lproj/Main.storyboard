@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -65,8 +65,8 @@
                                 <rect key="frame" x="95" y="588" width="224" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nao tem conta? Cadastre-se" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0AM-0p-ajN">
-                                <rect key="frame" x="20" y="695" width="374" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Não tem conta? Cadastre-se" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0AM-0p-ajN">
+                                <rect key="frame" x="20" y="695" width="374" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -113,7 +113,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="0.501700166" blue="0.065074503450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" placeholder="Procurar por nome ou tipo" id="uPh-bM-uBL">
-                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                            <rect key="frame" x="0.0" y="64" width="414" height="44"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
                         </searchBar>
@@ -187,7 +187,6 @@ Recomendado para: Mulheres a partir dos 30 anos.</string>
                                     <outlet property="precoAVista" destination="lC9-hT-LRM" id="eEp-1c-KkI"/>
                                     <outlet property="precoParcelado" destination="krD-pp-Zt4" id="CkU-d5-vHW"/>
                                     <outlet property="quantidade" destination="E5X-r2-VWF" id="VYq-ry-keO"/>
-                                    <segue destination="VAz-5D-4xV" kind="show" identifier="ListaProdutoParaProdutoSegue" id="j2O-rz-WLC"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -197,6 +196,9 @@ Recomendado para: Mulheres a partir dos 30 anos.</string>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Lista de produtos" id="IFA-9f-GFg"/>
+                    <connections>
+                        <segue destination="VAz-5D-4xV" kind="show" identifier="ListaProdutoParaProdutoSegue" id="a0W-Ey-Rx3"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="c1j-JJ-I6U" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -357,7 +359,7 @@ Recomendado para: Mulheres a partir dos 30 anos.</string>
             </objects>
             <point key="canvasLocation" x="2097.1014492753625" y="914.67391304347836"/>
         </scene>
-        <!--Preferencias-->
+        <!--Preferências-->
         <scene sceneID="B5d-WV-h49">
             <objects>
                 <viewController id="lWM-bU-Rru" customClass="PreferenciasViewController" customModule="ProjetoNatura" customModuleProvider="target" sceneMemberID="viewController">
@@ -466,6 +468,9 @@ Recomendado para: Mulheres a partir dos 30 anos.</string>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" backgroundImage="entrar em contato consultora2-2"/>
+                                <connections>
+                                    <segue destination="WgJ-qt-I61" kind="show" id="EPK-F9-GYb"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Etnia" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UsV-J8-yt3">
                                 <rect key="frame" x="14" y="176" width="89" height="21"/>
@@ -481,7 +486,7 @@ Recomendado para: Mulheres a partir dos 30 anos.</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Preferencias" id="8V2-CE-61P"/>
+                    <navigationItem key="navigationItem" title="Preferências" id="8V2-CE-61P"/>
                     <connections>
                         <outlet property="comprimentoCabelo" destination="6VR-pN-WK8" id="Y1m-2p-knn"/>
                         <outlet property="corCabelo" destination="gbi-v5-hpn" id="Chm-4T-TY5"/>
@@ -692,4 +697,7 @@ Recomendado para: Mulheres a partir dos 30 anos.</string>
         <image name="produto1" width="390" height="340"/>
         <image name="sign-in-button" width="1181" height="222"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="EPK-F9-GYb"/>
+    </inferredMetricsTieBreakers>
 </document>
